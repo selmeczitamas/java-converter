@@ -6,7 +6,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Javaica Converter");
+        System.out.println("Welcome to Javaica Converter Application");
         showMainMenu();
     }
 
@@ -35,22 +35,35 @@ public class Main {
                 System.out.printf("Currency converter menu");
                 System.out.println("");
                 System.out.println("Please choose from the following options:");
-                System.out.println("(1) HUF to EUR");
-                System.out.println("(2) EUR to HUF");
-                System.out.println("(3) HUF to USD");
-                System.out.println("(4) Check the daily exchange rate");
-                System.out.println("(0) Go back to Main Menu");
+                System.out.println("(1) Convert HUF to EUR");
+                System.out.println("(2) Convert EUR to HUF");
+                System.out.println("(3) Check the daily exchange rate");
+                System.out.println("(0) Go back to Main menu");
                 // currencyConverter(input());
 
                 break;
             case 2:
                 System.out.println("Distance converter menu");
+                System.out.println("");
+                System.out.println("Please choose from the following options:");
+                System.out.println("(1) Convert km to miles");
+                System.out.println("(2) Convert miles to km");
+                System.out.println("(0) Go back to Main menu");
                 break;
             case 3:
                 System.out.println("Weight converter menu");
+                System.out.println("");
+                System.out.println("Please choose from the following options:");
+                System.out.println("(1) Convert kg to lbs");
+                System.out.println("(2) Convert lbs to kg");
+                System.out.println("(0) Go back to Main menu");
                 break;
             case 4:
                 System.out.println("Temperature converter menu");
+                System.out.println("");
+                System.out.println("(1) Convert Celsius to Fahrenheit");
+                System.out.println("(2) Convert Fahrenheit to Celsius");
+                System.out.println("(0) Go back to Main menu");
                 break;
             default:
                 System.out.println("Please choose from option: 1,2,3 or 4");
@@ -73,6 +86,6 @@ public class Main {
         }
     }
 
-    currencyConverter hufToEuro = new currencyConverter();
-    hufToEuro.setHuf(100000);
+//    currencyConverter hufToEuro = new currencyConverter();
+//    hufToEuro.setHuf(100000);
 }
