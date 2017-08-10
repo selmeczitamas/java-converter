@@ -5,7 +5,6 @@ public class currencyConverter {
     private double huf;
     private double eur;
     private double exchangeRate;
-    private double result;
 
     public double getHuf() {
         return huf;
@@ -29,13 +28,5 @@ public class currencyConverter {
 
     public void setExchangeRate(double exchangeRate) {
         this.exchangeRate = exchangeRate;
-    }
-
-    public double getResult() {
-        return result;
-    }
-
-    public void setResult(double result) {
-        this.result = result;
     }
 }
