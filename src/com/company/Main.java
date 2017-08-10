@@ -29,6 +29,7 @@ public class Main {
         System.out.println("(1) Currency converter");
         System.out.println("(2) Distance converter");
         System.out.println("(3) Weight converter");
+        System.out.println("(4) Temperature converter");
         System.out.println("(0) Exit");
         System.out.printf("");
         chooseMainMenu(input());
@@ -53,7 +54,9 @@ public class Main {
                 break;
 
             case 4:
-                temperatureConverterMenu();
+                Temperature mytemp = new Temperature();
+                mytemp.convertTemperature();
+                showMainMenu();
                 break;
 
             case 0:
@@ -103,14 +106,6 @@ public class Main {
         System.out.println("(0) Go back to Main menu");
     }
 
-    public static void temperatureConverterMenu() {
-        System.out.println("");
-        System.out.println("Temperature converter menu");
-        System.out.println("");
-        System.out.println("(1) Convert Celsius to Fahrenheit");
-        System.out.println("(2) Convert Fahrenheit to Celsius");
-        System.out.println("(0) Go back to Main menu");
-    }
 
 //    public static void currencyConverter(int number) {
 //        switch (number) {
