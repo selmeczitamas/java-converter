@@ -31,7 +31,7 @@ public class weightConverter {
                 printOutMsg = "Please Enter the amount of weight in kilograms that you want to exchange to pounds: ";
                 changeMe.setKg(Main.input(printOutMsg));
                 System.out.println("----------------------------------------");
-                System.out.println(changeMe.getKg() + " kilograms equals to " + (changeMe.getKg() * exchangeRate) + " pounds.");
+                System.out.println(changeMe.getKg() + " kilograms equals to " + (changeMe.getKg() / exchangeRate) + " pounds.");
                 System.out.println("----------------------------------------");
                 Main.weightConverterMenu();
                 break;
@@ -40,7 +40,7 @@ public class weightConverter {
                 printOutMsg = "Please Enter the amount of weight in pounds that you want to exchange to kilograms: ";
                 changeMe.setLbs(Main.input(printOutMsg));
                 System.out.println("----------------------------------------");
-                System.out.println(changeMe.getLbs() + " pounds equals to " + (changeMe.getLbs() / exchangeRate) + " kilograms.");
+                System.out.println(changeMe.getLbs() + " pounds equals to " + (changeMe.getLbs() * exchangeRate) + " kilograms.");
                 System.out.println("----------------------------------------");
                 Main.weightConverterMenu();
                 break;

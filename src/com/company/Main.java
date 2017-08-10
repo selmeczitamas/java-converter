@@ -28,9 +28,9 @@ public class Main {
     }
 
     public static void showLogo() {
-        System.out.println("----------------------------------------");
+        System.out.println("");
         System.out.println("Welcome to Javaica Converter Application");
-        System.out.println("----------------------------------------");
+        System.out.println("");
     }
 
     public static void showMainMenu() {
