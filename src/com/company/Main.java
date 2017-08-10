@@ -31,6 +31,7 @@ public class Main {
         System.out.println("");
         System.out.println("Welcome to Javaica Converter Application");
         System.out.println("");
+
     }
 
     public static void showMainMenu() {
@@ -134,7 +135,7 @@ public class Main {
         System.out.println("(2) Convert Fahrenheit to Celsius");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
-        //temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
+        temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
     }
 
     public static void sayBye() {
