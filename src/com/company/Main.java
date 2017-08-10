@@ -101,7 +101,7 @@ public class Main {
 
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("         Distance converter menu        ");
+        System.out.println("         Distance converter menu"        );
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -134,7 +134,7 @@ public class Main {
         System.out.println("(2) Convert Fahrenheit to Celsius");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
-        //temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
+        temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
     }
 
     public static void sayBye() {
