@@ -57,7 +57,7 @@ public class currencyConverter {
                 System.out.println("----------------------------------------");
                 System.out.println(changeMe.getHuf() + " Forint equals to " + (changeMe.getHuf() / changeMe.getExchangeRate()) + " Euro.");
                 System.out.println("----------------------------------------");
-                Main.showMainMenu();
+                currencyConverterMenu();
                 break;
 
             case 2:
@@ -67,7 +67,7 @@ public class currencyConverter {
                 System.out.println("----------------------------------------");
                 System.out.println(changeMe.getEur() + " Euro equals to " + (changeMe.getEur() * changeMe.getExchangeRate()) + " HUF.");
                 System.out.println("----------------------------------------");
-                Main.showMainMenu();
+                currencyConverterMenu();
                 break;
 
             case 3:
