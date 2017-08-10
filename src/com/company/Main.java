@@ -6,9 +6,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("----------------------------------------");
-        System.out.println("Welcome to Javaica Converter Application");
-        System.out.println("----------------------------------------");
+        showLogo();
         showMainMenu();
     }
 
@@ -28,8 +26,13 @@ public class Main {
         return inputNumber;
     }
 
-    public static void showMainMenu() {
+    public static void showLogo() {
+        System.out.println("----------------------------------------");
+        System.out.println("Welcome to Javaica Converter Application");
+        System.out.println("----------------------------------------");
+    }
 
+    public static void showMainMenu() {
         System.out.println("");
         System.out.println("You can choose from the following options:");
         System.out.println("(1) Currency converter");
@@ -39,8 +42,6 @@ public class Main {
         System.out.println("");
         chooseMainMenu(input("Please Enter a number: "));
     }
-
-
 
     public static void chooseMainMenu(int number) {
         switch (number) {
