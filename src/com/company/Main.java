@@ -10,14 +10,16 @@ public class Main {
         showMainMenu();
     }
 
-    public static int input() {
+    public static int input(String printOutMessage) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Please Enter a number: ");
+        System.out.println(printOutMessage);
         int inputNumber = -1;
         try {
             inputNumber = reader.nextInt();
         } catch (InputMismatchException a) {
-            System.out.println("");
+            System.out.println("Error. I'm waiting for a number.");
+            System.out.println("You transferred back to Main menu.");
+            showMainMenu();
         }
         return inputNumber;
     }
@@ -30,8 +32,8 @@ public class Main {
         System.out.println("(2) Distance converter");
         System.out.println("(3) Weight converter");
         System.out.println("(0) Exit");
-        System.out.printf("");
-        chooseMainMenu(input());
+        System.out.println("");
+        chooseMainMenu(input("Please Enter a number: "));
     }
 
 
@@ -41,7 +43,6 @@ public class Main {
 
             case 1:
                 currencyConverterMenu();
-                // currencyConverter(input());
                 break;
 
             case 2:
@@ -81,6 +82,7 @@ public class Main {
         System.out.println("(2) Convert EUR to HUF");
         System.out.println("(3) Check the daily exchange rate");
         System.out.println("(0) Go back to Main menu");
+        moneyExchanger(input("Please Enter a number: "));
     }
 
     public static void distanceConverterMenu() {
@@ -112,6 +114,44 @@ public class Main {
         System.out.println("(0) Go back to Main menu");
     }
 
+    public static void moneyExchanger(int exChangeableValue) {
+        String printOutMsg;
+        double napiEuroVetel = 304.61;
+        double napiEuroEladas = 305.35;
+        currencyConverter changeMe = new currencyConverter();
+        switch (exChangeableValue) {
+
+            case 1:
+                changeMe.setExchangeRate(napiEuroVetel);
+                printOutMsg = "Please Enter the amount of money in HUF that you want to exchange to EUR: ";
+                changeMe.setHuf(input(printOutMsg));
+                System.out.println(changeMe.getHuf() + " Forint a mai arfolyamon " + (changeMe.getHuf() / changeMe.getExchangeRate()) + " Euro-t er.");
+                showMainMenu();
+                break;
+
+            case 2:
+                changeMe.setExchangeRate(napiEuroVetel);
+                printOutMsg = "Please Enter the amount of money in EUR that you want to exchange to HUF: ";
+                changeMe.setEur(input(printOutMsg));
+                System.out.println(changeMe.getEur() + " Euro a mai arfolyamon " + (changeMe.getEur() * changeMe.getExchangeRate()) + " Forintot er.");
+                showMainMenu();
+                break;
+
+            case 3:
+                System.out.println("Az aktualis Euro veteli arfolyam: " + napiEuroVetel);
+                System.out.println("Az aktualis Euro eladasi arfolyam: " + napiEuroEladas);
+                currencyConverterMenu();
+                break;
+
+            case 0:
+                showMainMenu();
+                break;
+
+            default:
+                currencyConverterMenu();
+                break;
+        }
+    }
 //    public static void currencyConverter(int number) {
 //        switch (number) {
 //            case 1:

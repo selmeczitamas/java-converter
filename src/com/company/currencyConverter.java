@@ -6,6 +6,7 @@ public class currencyConverter {
     private double eur;
     private double exchangeRate;
 
+
     public double getHuf() {
         return huf;
     }
