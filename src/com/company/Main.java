@@ -29,10 +29,12 @@ public class Main {
     public static void showLogo() {
         System.out.println("----------------------------------------");
         System.out.println("Welcome to Javaica Converter Application");
-        System.out.println("----------------------------------------");
     }
 
     public static void showMainMenu() {
+        System.out.println("----------------------------------------");
+        System.out.println("               Main Menu                ");
+        System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("You can choose from the following options:");
         System.out.println("(1) Currency converter");
@@ -87,7 +89,7 @@ public class Main {
 
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Distance converter menu");
+        System.out.println("         Distance converter menu        ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -99,7 +101,7 @@ public class Main {
 
     public static void weightConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Weight converter menu");
+        System.out.println("          Weight converter menu         ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -111,7 +113,7 @@ public class Main {
 
     public static void temperatureConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Temperature converter menu");
+        System.out.println("       Temperature converter menu       ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("(1) Convert Celsius to Fahrenheit");
