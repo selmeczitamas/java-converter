@@ -101,7 +101,7 @@ public class Main {
 
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("         Distance converter menu"        );
+        System.out.println("         Distance converter menu        ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
