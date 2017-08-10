@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         showLogo();
         showMainMenu();
+        sayBye();
     }
 
     public static int input(String printOutMessage) {
@@ -18,8 +19,8 @@ public class Main {
             inputNumber = reader.nextInt();
         } catch (InputMismatchException a) {
             System.out.println("----------------------------------------");
-            System.out.println("Error. I'm waiting for a number.");
-            System.out.println("You transferred back to Main menu.");
+            System.out.println("     Error. I'm waiting for a number    ");
+            System.out.println("    You transferred back to Main menu   ");
             System.out.println("----------------------------------------");
             showMainMenu();
         }
@@ -27,8 +28,9 @@ public class Main {
     }
 
     public static void showLogo() {
-        System.out.println("----------------------------------------");
+        System.out.println("");
         System.out.println("Welcome to Javaica Converter Application");
+        System.out.println("");
     }
 
     public static void showMainMenu() {
@@ -49,7 +51,7 @@ public class Main {
         switch (number) {
 
             case 1:
-                currencyConverter.currencyConverterMenu();
+                currencyConverterMenu();
                 break;
 
             case 2:
@@ -65,15 +67,11 @@ public class Main {
                 break;
 
             case 0:
-                System.out.println("----------------------------------------");
-                System.out.println("See you! Bye! :)");
-                System.out.println("----------------------------------------");
-                System.exit(0);
                 break;
 
             case 666:
                 System.out.println("----------------------------------------");
-                System.out.println("WHO ARE YOU???");
+                System.out.println("             WHO ARE YOU???             ");
                 System.out.println("----------------------------------------");
                 showMainMenu();
                 break;
@@ -87,6 +85,20 @@ public class Main {
         }
     }
 
+    public static void currencyConverterMenu() {
+        System.out.println("----------------------------------------");
+        System.out.println("         Currency converter menu        ");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+        System.out.println("Please choose from the following options:");
+        System.out.println("(1) Convert HUF to EUR");
+        System.out.println("(2) Convert EUR to HUF");
+        System.out.println("(3) Check the daily exchange rate");
+        System.out.println("(0) Go back to Main menu");
+        System.out.println("");
+        currencyConverter.moneyExchanger(input("Please Enter a number: "));
+    }
+
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
         System.out.println("         Distance converter menu        ");
@@ -97,6 +109,7 @@ public class Main {
         System.out.println("(2) Convert miles to km");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        distanceConverter.distanceExchanger(input("Please Enter a number: "));
     }
 
     public static void weightConverterMenu() {
@@ -109,6 +122,7 @@ public class Main {
         System.out.println("(2) Convert lbs to kg");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        weightConverter.weightExchanger(input("Please Enter a number: "));
     }
 
     public static void temperatureConverterMenu() {
@@ -120,5 +134,13 @@ public class Main {
         System.out.println("(2) Convert Fahrenheit to Celsius");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        //temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
+    }
+
+    public static void sayBye() {
+        System.out.println("----------------------------------------");
+        System.out.println("            See you! Bye! :)            ");
+        System.out.println("----------------------------------------");
+        System.exit(0);
     }
 }
