@@ -122,7 +122,7 @@ public class Main {
         System.out.println("(2) Convert lbs to kg");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
-        //weightConverter.weightExchanger(input("Please Enter a number: "));
+        weightConverter.weightExchanger(input("Please Enter a number: "));
     }
 
     public static void temperatureConverterMenu() {
