@@ -49,8 +49,9 @@ public class Main {
                 break;
 
             case 3:
+                weight myWeight = new weight();
+                myWeight.weightConverter();
 
-                weightConverterMenu();
                 break;
 
             case 4:
