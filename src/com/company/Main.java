@@ -46,7 +46,7 @@ public class Main {
         switch (number) {
 
             case 1:
-                currencyConverterMenu();
+                currencyConverter.currencyConverterMenu();
                 break;
 
             case 2:
@@ -76,24 +76,12 @@ public class Main {
                 break;
 
             default:
+                System.out.println("----------------------------------------");
                 System.out.println("Please choose from option: 1,2,3 or 4");
+                System.out.println("----------------------------------------");
                 showMainMenu();
                 break;
         }
-    }
-
-    public static void currencyConverterMenu() {
-        System.out.println("----------------------------------------");
-        System.out.println("Currency converter menu");
-        System.out.println("----------------------------------------");
-        System.out.println("");
-        System.out.println("Please choose from the following options:");
-        System.out.println("(1) Convert HUF to EUR");
-        System.out.println("(2) Convert EUR to HUF");
-        System.out.println("(3) Check the daily exchange rate");
-        System.out.println("(0) Go back to Main menu");
-        System.out.println("");
-        moneyExchanger(input("Please Enter a number: "));
     }
 
     public static void distanceConverterMenu() {
@@ -129,48 +117,5 @@ public class Main {
         System.out.println("(2) Convert Fahrenheit to Celsius");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
-    }
-
-    public static void moneyExchanger(int exChangeableValue) {
-        String printOutMsg;
-        double dailyEuroRate = 304.61;
-        currencyConverter changeMe = new currencyConverter();
-        switch (exChangeableValue) {
-
-            case 1:
-                changeMe.setExchangeRate(dailyEuroRate);
-                printOutMsg = "Please Enter the amount of money in HUF that you want to exchange to EUR: ";
-                changeMe.setHuf(input(printOutMsg));
-                System.out.println("----------------------------------------");
-                System.out.println(changeMe.getHuf() + " Forint equals to " + (changeMe.getHuf() / changeMe.getExchangeRate()) + " Euro.");
-                System.out.println("----------------------------------------");
-                showMainMenu();
-                break;
-
-            case 2:
-                changeMe.setExchangeRate(dailyEuroRate);
-                printOutMsg = "Please Enter the amount of money in EUR that you want to exchange to HUF: ";
-                changeMe.setEur(input(printOutMsg));
-                System.out.println("----------------------------------------");
-                System.out.println(changeMe.getEur() + " Euro equals to " + (changeMe.getEur() * changeMe.getExchangeRate()) + " HUF.");
-                System.out.println("----------------------------------------");
-                showMainMenu();
-                break;
-
-            case 3:
-                System.out.println("----------------------------------------");
-                System.out.println("The current Euro exchange rate is: " + dailyEuroRate);
-                System.out.println("----------------------------------------");
-                currencyConverterMenu();
-                break;
-
-            case 0:
-                showMainMenu();
-                break;
-
-            default:
-                currencyConverterMenu();
-                break;
-        }
     }
 }
