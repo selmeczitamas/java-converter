@@ -30,20 +30,6 @@ public class currencyConverter {
         this.exchangeRate = exchangeRate;
     }
 
-    public static void currencyConverterMenu() {
-        System.out.println("----------------------------------------");
-        System.out.println("Currency converter menu");
-        System.out.println("----------------------------------------");
-        System.out.println("");
-        System.out.println("Please choose from the following options:");
-        System.out.println("(1) Convert HUF to EUR");
-        System.out.println("(2) Convert EUR to HUF");
-        System.out.println("(3) Check the daily exchange rate");
-        System.out.println("(0) Go back to Main menu");
-        System.out.println("");
-        moneyExchanger(Main.input("Please Enter a number: "));
-    }
-
     public static void moneyExchanger(int exChangeableValue) {
         String printOutMsg;
         double dailyEuroRate = 304.61;
@@ -74,7 +60,7 @@ public class currencyConverter {
                 System.out.println("----------------------------------------");
                 System.out.println("The current Euro exchange rate is: " + dailyEuroRate);
                 System.out.println("----------------------------------------");
-                currencyConverterMenu();
+                Main.currencyConverterMenu();
                 break;
 
             case 0:
@@ -82,7 +68,7 @@ public class currencyConverter {
                 break;
 
             default:
-                currencyConverterMenu();
+                Main.currencyConverterMenu();
                 break;
         }
     }

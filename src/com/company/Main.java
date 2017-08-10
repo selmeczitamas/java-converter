@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         showLogo();
         showMainMenu();
+        sayBye();
     }
 
     public static int input(String printOutMessage) {
@@ -47,7 +48,7 @@ public class Main {
         switch (number) {
 
             case 1:
-                currencyConverter.currencyConverterMenu();
+                currencyConverterMenu();
                 break;
 
             case 2:
@@ -63,10 +64,6 @@ public class Main {
                 break;
 
             case 0:
-                System.out.println("----------------------------------------");
-                System.out.println("See you! Bye! :)");
-                System.out.println("----------------------------------------");
-                System.exit(0);
                 break;
 
             case 666:
@@ -85,6 +82,20 @@ public class Main {
         }
     }
 
+    public static void currencyConverterMenu() {
+        System.out.println("----------------------------------------");
+        System.out.println("Currency converter menu");
+        System.out.println("----------------------------------------");
+        System.out.println("");
+        System.out.println("Please choose from the following options:");
+        System.out.println("(1) Convert HUF to EUR");
+        System.out.println("(2) Convert EUR to HUF");
+        System.out.println("(3) Check the daily exchange rate");
+        System.out.println("(0) Go back to Main menu");
+        System.out.println("");
+        currencyConverter.moneyExchanger(input("Please Enter a number: "));
+    }
+
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
         System.out.println("Distance converter menu");
@@ -95,6 +106,7 @@ public class Main {
         System.out.println("(2) Convert miles to km");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        distanceConverter.distanceExchanger(input("Please Enter a number: "));
     }
 
     public static void weightConverterMenu() {
@@ -107,6 +119,7 @@ public class Main {
         System.out.println("(2) Convert lbs to kg");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        //weightConverter.weightExchanger(input("Please Enter a number: "));
     }
 
     public static void temperatureConverterMenu() {
@@ -118,5 +131,13 @@ public class Main {
         System.out.println("(2) Convert Fahrenheit to Celsius");
         System.out.println("(0) Go back to Main menu");
         System.out.println("");
+        //temperatureConverter.temperatureExchanger(input("Please Enter a number: "));
+    }
+
+    public static void sayBye() {
+        System.out.println("----------------------------------------");
+        System.out.println("See you! Bye! :)");
+        System.out.println("----------------------------------------");
+        System.exit(0);
     }
 }
