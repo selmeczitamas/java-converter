@@ -19,8 +19,8 @@ public class Main {
             inputNumber = reader.nextInt();
         } catch (InputMismatchException a) {
             System.out.println("----------------------------------------");
-            System.out.println("Error. I'm waiting for a number.");
-            System.out.println("You transferred back to Main menu.");
+            System.out.println("     Error. I'm waiting for a number    ");
+            System.out.println("    You transferred back to Main menu   ");
             System.out.println("----------------------------------------");
             showMainMenu();
         }
@@ -34,6 +34,9 @@ public class Main {
     }
 
     public static void showMainMenu() {
+        System.out.println("----------------------------------------");
+        System.out.println("               Main Menu                ");
+        System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("You can choose from the following options:");
         System.out.println("(1) Currency converter");
@@ -68,7 +71,7 @@ public class Main {
 
             case 666:
                 System.out.println("----------------------------------------");
-                System.out.println("WHO ARE YOU???");
+                System.out.println("             WHO ARE YOU???             ");
                 System.out.println("----------------------------------------");
                 showMainMenu();
                 break;
@@ -84,7 +87,7 @@ public class Main {
 
     public static void currencyConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Currency converter menu");
+        System.out.println("         Currency converter menu        ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -98,7 +101,7 @@ public class Main {
 
     public static void distanceConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Distance converter menu");
+        System.out.println("         Distance converter menu"        );
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -111,7 +114,7 @@ public class Main {
 
     public static void weightConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Weight converter menu");
+        System.out.println("          Weight converter menu         ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("Please choose from the following options:");
@@ -124,7 +127,7 @@ public class Main {
 
     public static void temperatureConverterMenu() {
         System.out.println("----------------------------------------");
-        System.out.println("Temperature converter menu");
+        System.out.println("       Temperature converter menu       ");
         System.out.println("----------------------------------------");
         System.out.println("");
         System.out.println("(1) Convert Celsius to Fahrenheit");
@@ -136,7 +139,7 @@ public class Main {
 
     public static void sayBye() {
         System.out.println("----------------------------------------");
-        System.out.println("See you! Bye! :)");
+        System.out.println("            See you! Bye! :)            ");
         System.out.println("----------------------------------------");
         System.exit(0);
     }
